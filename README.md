@@ -57,3 +57,7 @@ FirstTouch accesses records from the workspace selected during authorization and
 - [FirstTouch](https://www.firsttouch.com)
 - [Documentation](https://docs.firsttouch.com)
 - [Sign in](https://app.firsttouch.ai)
+
+## License
+
+Licensed under the [Apache License 2.0](LICENSE).
