@@ -1,0 +1,21 @@
+{
+  "name": "firsttouch",
+  "version": "1.0.0",
+  "description": "Work with FirstTouch audiences, outreach flows, enrollments, and tasks from Grok.",
+  "author": {
+    "name": "FirstTouch",
+    "url": "https://www.firsttouch.com"
+  },
+  "homepage": "https://www.firsttouch.com",
+  "repository": "https://github.com/First-Touch-Inc/mcp",
+  "keywords": [
+    "firsttouch",
+    "firsttouch mcp",
+    "audience management",
+    "outreach flow automation",
+    "contact enrollment",
+    "task management",
+    "hubspot list import"
+  ],
+  "logo": "assets/logo.svg"
+}

@@ -1,54 +1,59 @@
 # FirstTouch MCP
 
-**Give your AI assistant real hands on LinkedIn, with HubSpot-native attribution.**
-
-FirstTouch (https://www.firsttouch.com) is the social infrastructure for AI: 40 MCP tools that let Claude, ChatGPT, Cursor, Codex, and Windsurf operate LinkedIn safely. Agents can source the people who like and comment on posts, qualify them against your ICP with AI Qualification, and queue LinkedIn connection requests, messages, and email inside HubSpot workflows, with a Human-in-the-Loop approval gate before anything sends.
+Connect your AI assistant to your FirstTouch workspace to build audiences, create outreach flows, start selected contacts, track enrollment progress, and review tasks in natural language.
 
 ## Connect
 
-Server URL: `https://mcp.firsttouch.ai`
+Use the hosted FirstTouch MCP server:
 
-Claude Code:
-
-```bash
-claude mcp add --transport http firsttouch https://mcp.firsttouch.ai
+```text
+https://mcp.firsttouch.com
 ```
 
-Generic MCP client config:
+The client opens a browser for FirstTouch sign-in and workspace approval. Authentication uses OAuth, so no API key needs to be pasted into the MCP configuration.
+
+Generic MCP client configuration:
 
 ```json
 {
   "mcpServers": {
     "firsttouch": {
-      "url": "https://mcp.firsttouch.ai"
+      "type": "http",
+      "url": "https://mcp.firsttouch.com"
     }
   }
 }
 ```
 
-Sign up at https://app.firsttouch.ai/sign-up (self-serve) or book a demo at https://www.firsttouch.com/get-a-demo.
+## What you can do
 
-## Why FirstTouch instead of a scraper-style LinkedIn MCP
+- Check the signed-in user, active workspace, team members, and assignment permissions.
+- List HubSpot contact lists connected to the workspace.
+- Create audiences from supplied contacts or a connected HubSpot list.
+- Add contacts to an audience and attach an audience to a flow plan.
+- List, inspect, and create outreach flow plans with email, call, manual, wait, and branch actions.
+- Review available flow variables and publish or unpublish a valid flow.
+- Inspect awaiting contacts, start only the selected contacts, and follow enrollment progress.
+- Review tasks assigned to workspace members.
 
-- **CRM-native attribution:** every touch logs to the HubSpot contact timeline, so pipeline reporting covers LinkedIn like it covers email (touch to closed-won).
-- **Human-in-the-Loop:** agents queue, people approve. Nothing sends without sign-off unless you turn approval off.
-- **Account safety:** SOC 2 Type II certified; zero account restrictions or bans across 200+ connected accounts; human-like pacing with dedicated proxies; auto-withdraw for stale connection requests.
-- **Social-signal sourcing:** detects and qualifies the people who engage with LinkedIn posts to build warm audiences. It never likes, comments, or follows on your behalf.
+Every email and call outreach action created through this connection requires human approval before execution.
 
-## What agents can do
+## Example requests
 
-- Discover and enrich contacts (LinkedIn filters: industry, role, geography, company size, funding)
-- Build audiences from HubSpot lists, Sales Navigator URLs, or post engagement
-- Run AI Qualification with prospect, company, and disqualify criteria plus threshold scoring
-- Create and enroll multi-channel flows: LinkedIn visit profile, connection request, message, plus email and call steps
-- Track everything in HubSpot with ownership routing and revenue reporting
+- "Show my FirstTouch user, active workspace, and assignable team members."
+- "Create a FirstTouch audience from my HubSpot list named Q3 Enterprise Leads."
+- "Draft a flow that sends an intro email, waits one day, and creates a call task."
+- "Show the awaiting contacts for this flow and enroll the first five."
+- "List my FirstTouch tasks."
 
-## Docs and links
+## Network access and data
 
-- Tool documentation: https://docs.firsttouch.com/
-- Product page: https://www.firsttouch.com/mcp
-- Pricing: https://www.firsttouch.com/pricing ($99 per seat per month plus usage credits; works with every HubSpot tier including Free CRM)
-- Safety guide: https://docs.firsttouch.com/Safety-Checklist
-- llms.txt: https://www.firsttouch.com/llms.txt
+The plugin connects to the FirstTouch-hosted MCP endpoint at `https://mcp.firsttouch.com`. Browser-based authorization is handled by FirstTouch services.
 
-FirstTouch is the fastest-growing app by installs in the HubSpot marketplace (Jan-May 2026), backed by Resolute Ventures, Data Point Capital, Dharmesh Shah (HubSpot co-founder), and the founders of Klaviyo.
+FirstTouch accesses records from the workspace selected during authorization and respects that user's permissions. When a user explicitly requests a workflow involving a connected HubSpot account, FirstTouch may read the relevant HubSpot data. The plugin does not install or execute local code.
+
+## Links
+
+- [FirstTouch](https://www.firsttouch.com)
+- [Documentation](https://docs.firsttouch.com)
+- [Sign in](https://app.firsttouch.ai)
