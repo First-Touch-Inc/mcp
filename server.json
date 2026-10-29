@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.First-Touch-Inc/mcp",
+  "title": "FirstTouch",
+  "description": "Manage FirstTouch audiences, outreach flows, enrollments, and approval tasks.",
+  "version": "1.0.0",
+  "websiteUrl": "https://github.com/First-Touch-Inc/mcp",
+  "repository": {
+    "url": "https://github.com/First-Touch-Inc/mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.firsttouch.com"
+    }
+  ]
+}
