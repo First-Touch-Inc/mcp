@@ -10,6 +10,9 @@
   "homepage": "https://www.firsttouch.com",
   "repository": "https://github.com/First-Touch-Inc/mcp",
   "icon": "./icon.png",
+  "documentationUrl": "https://docs.firsttouch.com/",
+  "supportUrl": "https://www.firsttouch.com/contact",
   "privacyPolicyUrl": "https://www.firsttouch.com/privacy-policy",
+  "termsOfServiceUrl": "https://www.firsttouch.com/terms-of-service",
   "license": "Apache-2.0"
 }
