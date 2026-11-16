@@ -1,0 +1,27 @@
+# FirstTouch for Claude
+
+Connect Claude to your FirstTouch workspace through the hosted FirstTouch MCP server. Use it to inspect your workspace, build audiences, create and manage outreach flows, review enrollments, and work with assigned tasks. FirstTouch can use connected sources such as HubSpot and can support LinkedIn-related prospecting and outreach workflows, depending on the features and permissions enabled in your workspace.
+
+## Connect
+
+Install this plugin in Claude and connect your FirstTouch account when prompted. Authorization opens a FirstTouch sign-in and workspace approval flow. The plugin points to `https://mcp.firsttouch.com` and does not require an API key or run local code.
+
+The available actions depend on your account, workspace permissions, connected services, and FirstTouch settings. Some actions can create or change audiences, flows, enrollments, or outreach activity; review the requested action before approving it in Claude.
+
+## Example requests
+
+- "Show my active FirstTouch workspace and team members."
+- "Create an audience from my connected HubSpot list named Q3 Enterprise Leads."
+- "Draft an outreach flow with an introductory email, a one-day wait, and a call task."
+- "Show which contacts are waiting in this flow and start the first five."
+- "List my assigned FirstTouch tasks."
+
+## Data and support
+
+Requests and workspace data used by this plugin are sent to the FirstTouch-hosted MCP endpoint. FirstTouch may access connected services when you request a workflow that uses them. See the [documentation](https://docs.firsttouch.com), [privacy policy](https://www.firsttouch.com/privacy-policy), and [contact page](https://www.firsttouch.com/contact) for more information.
+
+This initial plugin includes the MCP connection only. Skills can be added in a later plugin version.
+
+## License
+
+Licensed under the [Apache License 2.0](LICENSE).

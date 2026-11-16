@@ -1,0 +1,13 @@
+{
+  "name": "firsttouch",
+  "displayName": "FirstTouch",
+  "version": "1.0.0",
+  "description": "Connect Claude to FirstTouch for prospect research, audiences, outreach flows, enrollments, and tasks.",
+  "author": {
+    "name": "FirstTouch",
+    "url": "https://www.firsttouch.com"
+  },
+  "homepage": "https://www.firsttouch.com",
+  "repository": "https://github.com/First-Touch-Inc/mcp",
+  "license": "Apache-2.0"
+}
