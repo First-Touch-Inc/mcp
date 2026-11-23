@@ -1,18 +1,28 @@
-# FirstTouch MCP
+# FirstTouch MCP: LinkedIn for AI agents
 
-Connect your AI assistant to your FirstTouch workspace to build audiences, create outreach flows, start selected contacts, track enrollment progress, and review tasks in natural language.
+Give Claude, ChatGPT, Gemini, Cursor, Codex or any MCP client the ability to run LinkedIn outreach for your team: find and enrich prospects, send connection requests and messages, work the LinkedIn inbox, watch who engages with your posts, and sync it all to HubSpot. Every outreach action can require human approval before it goes out.
+
+FirstTouch is used by 300+ revenue teams. HubSpot is optional.
 
 ## Connect
 
-Use the hosted FirstTouch MCP server:
+Hosted server, OAuth sign-in, no API key to paste:
 
 ```text
 https://mcp.firsttouch.com
 ```
 
-The client opens a browser for FirstTouch sign-in and workspace approval. Authentication uses OAuth, so no API key needs to be pasted into the MCP configuration.
+**Claude (claude.ai or desktop):** Settings, Connectors, Add custom connector, paste the URL above, then sign in to FirstTouch.
 
-Generic MCP client configuration:
+**Claude Code:**
+
+```bash
+claude mcp add --transport http firsttouch https://mcp.firsttouch.com
+```
+
+**ChatGPT:** Settings, Apps and connectors, Create, paste the URL above (developer mode), then sign in.
+
+**Cursor, Windsurf, Codex, Gemini and other MCP clients:**
 
 ```json
 {
@@ -25,39 +35,43 @@ Generic MCP client configuration:
 }
 ```
 
-## What you can do
+Full setup guide: https://docs.firsttouch.com/WebApp/Mcp/connect
 
-- Check the signed-in user, active workspace, team members, and assignment permissions.
-- List HubSpot contact lists connected to the workspace.
-- Create audiences from supplied contacts or a connected HubSpot list.
-- Add contacts to an audience and attach an audience to a flow plan.
-- List, inspect, and create outreach flow plans with email, call, manual, wait, and branch actions.
-- Review available flow variables and publish or unpublish a valid flow.
-- Inspect awaiting contacts, start only the selected contacts, and follow enrollment progress.
-- Review tasks assigned to workspace members.
+## What your agent can do
 
-Every email and call outreach action created through this connection requires human approval before execution.
+- **LinkedIn outreach:** send connection requests and messages for a contact or a whole audience, as one-off actions or multi-step flows.
+- **Approvals:** outreach actions are approval-required by default and configurable by action type. Approvals show up in FirstTouch, and as Slack messages once Slack is connected.
+- **LinkedIn inbox:** read and reply to conversations across your team's connected LinkedIn accounts.
+- **Engagement signals:** monitor LinkedIn profiles and company pages and pull the people who like and comment.
+- **Prospecting and enrichment:** discover contacts, enrich profiles, find emails and phone numbers.
+- **HubSpot:** build audiences from HubSpot lists and log completed LinkedIn activity to the contact timeline when engagement tracking is enabled.
+- **Team view:** team members, credits, outreach queue and metrics.
+
+60+ tools in total.
 
 ## Example requests
 
-- "Show my FirstTouch user, active workspace, and assignable team members."
-- "Create a FirstTouch audience from my HubSpot list named Q3 Enterprise Leads."
-- "Draft a flow that sends an intro email, waits one day, and creates a call task."
-- "Show the awaiting contacts for this flow and enroll the first five."
-- "List my FirstTouch tasks."
+- "Find VPs of Sales at Series B SaaS companies in New York and draft a connection request for each. Hold them for my approval."
+- "Send a LinkedIn connection request to everyone on my HubSpot list Q4 Enterprise Leads."
+- "Who liked or commented on our CEO's last three LinkedIn posts? Draft a follow-up for the ones that match our ICP."
+- "Show my unread LinkedIn conversations and draft replies."
+- "How many connection requests did each rep send this week, and how many were accepted?"
+
+## Pricing
+
+$99 per connected LinkedIn account (sender) per month, with a 14-day free trial and no credit card required. Sending connection requests and messages uses no credits. https://www.firsttouch.com/pricing
 
 ## Network access and data
 
-The plugin connects to the FirstTouch-hosted MCP endpoint at `https://mcp.firsttouch.com`. Browser-based authorization is handled by FirstTouch services.
-
-FirstTouch accesses records from the workspace selected during authorization and respects that user's permissions. When a user explicitly requests a workflow involving a connected HubSpot account, FirstTouch may read the relevant HubSpot data. The plugin does not install or execute local code.
+The connector talks only to the FirstTouch-hosted endpoint. Sign-in uses OAuth through FirstTouch. Each user acts within the workspace they authorize and with their own permissions. FirstTouch reads HubSpot data only when a user asks for a workflow that needs it. Nothing is installed or run locally.
 
 ## Links
 
-- [FirstTouch](https://www.firsttouch.com)
+- [FirstTouch for AI agents](https://www.firsttouch.com/mcp)
 - [Documentation](https://docs.firsttouch.com)
-- [Sign in](https://app.firsttouch.ai)
+- [API reference](https://docs.firsttouch.com/api-reference/introduction)
+- [Sign up](https://app.firsttouch.ai)
 
 ## License
 
-Licensed under the [Apache License 2.0](LICENSE).
+Apache License 2.0. See [LICENSE](LICENSE).
