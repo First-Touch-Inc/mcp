@@ -20,7 +20,7 @@ https://mcp.firsttouch.com
 claude mcp add --transport http firsttouch https://mcp.firsttouch.com
 ```
 
-**ChatGPT:** Settings, Apps and connectors, Create, paste the URL above (developer mode), then sign in.
+**ChatGPT:** FirstTouch is listed in ChatGPT's plugin directory. Install the [FirstTouch plugin](https://chatgpt.com/plugins/plugin_asdk_app_6a8c88cc224c8191ab9759b9cd6a5276), then sign in to FirstTouch. No URL or developer mode needed.
 
 **Cursor, Windsurf, Codex, Gemini and other MCP clients:**
 
